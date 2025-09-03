@@ -47,10 +47,11 @@ dotnet run
 Program.cs, appsettings.json 
 
 ## API Endpoints
-Resource:	    Endpoints:
-Users	        GET /api/users, POST /api/users
-Posts	        GET /api/posts, POST /api/posts, GET /api/posts/{id}
-Comments	    GET /api/posts/{id}/comments, POST /api/posts/{id}/comments
+Users:	GET /api/users, POST /api/users
+
+Posts:	GET /api/posts, POST /api/posts, GET /api/posts/{id}
+
+Comments: GET /api/posts/{id}/comments, POST /api/posts/{id}/comments
 
 ## Learning Goals
 
