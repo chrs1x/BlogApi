@@ -8,9 +8,9 @@ namespace BlogApi.Services
 
         User? GetUserById(int id);
 
-        User CreateUser(User user);
+        User CreateUser(CreateUserDto dto);
 
-        User UpdateUser(User user);
+        User UpdateUser(UpdateUserDto dto, int id);
 
         User DeleteUser(int id);
     }
