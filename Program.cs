@@ -1,4 +1,5 @@
 using BlogApi.Data;
+using BlogApi.Middleware;
 using BlogApi.Models;
 using BlogApi.Services.CommentService;
 using BlogApi.Services.PostService;
@@ -19,7 +20,7 @@ builder.Services.AddScoped<ICommentService, CommentService>();
 builder.Services.AddControllers();
 builder.Services.AddEndpointsApiExplorer();
 builder.Services.AddSwaggerGen();
-
+ 
 
 var app = builder.Build();
 
@@ -32,6 +33,8 @@ if (app.Environment.IsDevelopment())
 // Configure the HTTP request pipeline.
 
 app.UseHttpsRedirection();
+
+app.UseMiddleware<ErrorHandlingMiddleware>();
 
 app.UseAuthorization();
 
