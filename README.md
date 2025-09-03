@@ -39,11 +39,11 @@ dotnet run
 5. Navigate to https://localhost:5001/swagger to test endpoints.
 
 ## Project Structure
-/Controllers — API endpoints  
-/Models — Domain models  
-/Services — Business logic  
-/Data — EF DbContext  
-/Migrations — EF migrations  
+/Controllers - API endpoints  
+/Models - Domain models  
+/Services - Business logic  
+/Data - EF DbContext  
+/Migrations - EF migrations  
 Program.cs, appsettings.json 
 
 ## API Endpoints
