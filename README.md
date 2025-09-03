@@ -36,7 +36,7 @@ dotnet ef database update
 ```bash
 dotnet run
 ```
-5. Navigate to https://localhost:5001/swagger to test endpoints.
+5. Navigate to https://localhost:7119/swagger to test endpoints.
 
 ## Project Structure
 /Controllers - API endpoints  
