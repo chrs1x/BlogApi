@@ -1,6 +1,14 @@
-﻿namespace BlogApi.Models.DTOs
+﻿using System.ComponentModel.DataAnnotations;
+
+namespace BlogApi.Models.DTOs
 {
-    public class CreatePostDTO
+    public class CreatePostDto
     {
+        [Required]
+        public string Title { get; set; }
+        public string Content { get; set; } 
+
+        [Required]
+        public int UserId { get; set; } // links post to user creating it
     }
 }

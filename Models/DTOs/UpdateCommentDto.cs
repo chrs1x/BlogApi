@@ -1,6 +1,8 @@
-﻿namespace BlogApi.Models
+﻿
+namespace BlogApi.Models
 {
-    public class CreatePostDTO
+    public class UpdateCommentDto
     {
+        public string? Text { get; set; } 
     }
 }
