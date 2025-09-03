@@ -47,11 +47,8 @@ dotnet run
 Program.cs, appsettings.json 
 
 ## API Endpoints
-Users:	GET /api/users, POST /api/users
+<img width="970" height="914" alt="image" src="https://github.com/user-attachments/assets/eaaf7f0d-80b8-41ae-a991-8379980b7105" />
 
-Posts:	GET /api/posts, POST /api/posts, GET /api/posts/{id}
-
-Comments: GET /api/posts/{id}/comments, POST /api/posts/{id}/comments
 
 ## Learning Goals
 
