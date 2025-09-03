@@ -22,20 +22,20 @@ A simple backend API built with ASP.NET Core, EF Core, and SQL Server. Supports 
 
 ### Setup
 1. Clone the repo:
-`  
-     git clone https://github.com/your-username/BlogApi.git
-     cd BlogApi
-`
+```bash  
+git clone https://github.com/chrs1x/BlogApi.git
+cd BlogApi
+```
 3. Configure the database in appsettings.json.
 4. Run migrations:
-`
-    dotnet ef migrations add Init
-    dotnet ef database update
-`
+```bash
+dotnet ef migrations add Init
+dotnet ef database update
+```
 4. Launch the API:
-`
-    dotnet run
-`
+```bash
+dotnet run
+```
 5. Navigate to https://localhost:5001/swagger to test endpoints.
 
 ## Project Structure
