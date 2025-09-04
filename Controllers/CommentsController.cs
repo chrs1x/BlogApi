@@ -42,9 +42,9 @@ namespace BlogApi.Controllers
         /// <param name="postId">The id of the post.</param>
         /// <returns>A list of comments for that post, or 404 if none are found.</returns>
         [HttpGet("post/{postId}")]
-        public async Task<ActionResult<Comment?>> GetCommentsByPost(int userId)
+        public async Task<ActionResult<Comment?>> GetCommentsByPost(int postId)
         {
-            var comment = await _commentService.GetCommentsByPost(userId);
+            var comment = await _commentService.GetCommentsByPost(postId);
             return comment == null ? NotFound() : Ok(comment);
         }
 
