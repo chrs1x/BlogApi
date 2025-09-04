@@ -44,14 +44,69 @@ dotnet run
 /Services - Business logic  
 /Data - EF DbContext  
 /Migrations - EF migrations  
+/Middleware - Error Handling
 Program.cs, appsettings.json 
 
 ## API Endpoints
+### Users
+
+GET  `/api/users` - Get all users
+
+GET  `/api/users/{id}` - Get user by ID
+
+POST  `/api/users` - Create a new user
+
+PUT  `/api/users/{id}` - Update an existing user
+
+GET  `/api/users/search` - Search for a user by name/email
+
+DELETE  `/api/users/{id}` - Delete a user
+
+### Posts
+
+GET `/api/posts` - Get all posts
+
+GET `/api/posts/{id}` - Get post by ID
+
+GET `/api/posts/user/{userId}` - Get all posts by a specific user
+
+POST `/api/posts` - Create a new post
+
+PUT `/api/posts/{id}` - Update an existing post
+
+GET `/api/posts/search` - Search for a post by title/content
+
+DELETE `/api/posts/{id}` - Delete a post
+
+### Comments
+
+GET `/api/comments` - Get all comments
+
+GET `/api/comments/{id}` - Get comment by ID
+
+GET `/api/comments/posts/{postId}` - Get all comments for a specific post
+
+POST `/api/comments` - Add a new comment
+
+PUT `/api/comments/{id}` - Update an existing comment
+
+GET `/api/comments/search` - Search for a comment by text content
+
+DELETE `/api/comments/{id}` - Delete a comment
+
+### Swagger UI
+
 <img width="970" height="914" alt="image" src="https://github.com/user-attachments/assets/eaaf7f0d-80b8-41ae-a991-8379980b7105" />
 
 
 ## Learning Goals
 
-To understand CRUD via EF Core
-Practice building clean API layers (controllers, services, data)
-Learn to manage schema changes with migrations
+Practice designing a RESTful API using ASP.NET Core and EF Core
+
+Apply layered architecture (controllers → services → data) for separation of concerns
+
+Manage schema evolution with EF Core migrations
+
+Implement error handling middleware for consistent API responses
+
+Use Swagger to provide self-documenting APIs
