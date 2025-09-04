@@ -40,12 +40,13 @@ dotnet run
 
 ## Project Structure
 /Controllers - API endpoints  
-/Models - Domain models  
+/Models - Domain models & DTOs
 /Services - Business logic  
-/Data - EF DbContext  
-/Migrations - EF migrations  
-/Middleware - Error Handling
-Program.cs, appsettings.json 
+/Data - EF Core DbContext  
+/Migrations - EF Core migrations  
+/Middleware - Error Handling </br>
+/Properties - Project Settings </br>
+Program.cs, appsettings.json
 
 ## API Endpoints
 ### Users
@@ -101,12 +102,12 @@ DELETE `/api/comments/{id}` - Delete a comment
 
 ## Learning Goals
 
-Practice designing a RESTful API using ASP.NET Core and EF Core
+Get hands-on practice building a REST API with ASP.NET Core and EF Core
 
-Apply layered architecture (controllers → services → data) for separation of concerns
+Learn how to keep code organized by splitting it into controllers, services, and data layers
 
-Manage schema evolution with EF Core migrations
+Understand how to update and manage the database using EF Core migrations
 
-Implement error handling middleware for consistent API responses
+Add basic error handling so the API gives clear, consistent responses
 
-Use Swagger to provide self-documenting APIs
+Try out Swagger to make the API easy to test and document
