@@ -41,7 +41,7 @@ namespace BlogApi.Services.CommentService
         {
             var comment = await _context.Comments.FindAsync(id);
             if (comment == null) throw new KeyNotFoundException($"No comment found with that id.");
-            if(!string.IsNullOrWhiteSpace(dto.Text)) { dto.Text = dto.Text; }
+            if(!string.IsNullOrWhiteSpace(dto.Text)) { comment.Text = dto.Text; }
             await _context.SaveChangesAsync();  
             return comment;
         }

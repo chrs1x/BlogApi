@@ -52,7 +52,7 @@ namespace BlogApi.Tests
             var result = await service.GetPostById(post.Id);
 
             Assert.NotNull(result);
-            Assert.Equal("Chris", result.Title);
+            Assert.Equal("Swim", result.Title);
         }
 
         [Fact]

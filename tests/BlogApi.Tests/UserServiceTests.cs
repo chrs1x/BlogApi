@@ -86,7 +86,7 @@ namespace BlogApi.Tests
             }, user.Id);
 
             Assert.Equal("Mark", updated.Name);
-            Assert.Equal("mpotter@gmail", updated.Email);
+            Assert.Equal("mpotter@gmail.com", updated.Email);
         }
 
         [Fact]
