@@ -27,7 +27,7 @@ namespace BlogApi.Tests
         [Fact]
         public async Task GetAllPosts_ReturnsAllPosts()
         {
-            var context = await GetDbContext();
+            await using var context = await GetDbContext();
             var service = new PostService(context);
 
             context.Posts.Add(new Models.Post { Title = "First Post", Content = "Hello World" });
@@ -42,7 +42,7 @@ namespace BlogApi.Tests
         [Fact]
         public async Task GetPostById_ReturnsPost()
         {
-            var context = await GetDbContext();
+            await using var context = await GetDbContext();
             var service = new PostService(context);
 
             var post = new Models.Post { Title = "Swim", Content = "Just went for a swim!" };
@@ -58,7 +58,7 @@ namespace BlogApi.Tests
         [Fact]
         public async Task GetPostsByUser_ReturnsUsersPosts()
         {
-            var context = await GetDbContext();
+            await using var context = await GetDbContext();
             var service = new PostService(context);
 
             var user1 = new Models.User { Name = "Enoch", Email = "ebarnes@gmail.com" };
@@ -82,7 +82,7 @@ namespace BlogApi.Tests
         [Fact]
         public async Task CreatePost_SavesPost()
         {
-            var context = await GetDbContext();
+            await using var context = await GetDbContext();
             var service = new PostService(context);
 
             var post = await service.CreatePost(new Models.DTOs.CreatePostDto
@@ -100,7 +100,7 @@ namespace BlogApi.Tests
         [Fact]
         public async Task UpdatePost_EditsExistingPost()
         {
-            var context = await GetDbContext();
+            await using var context = await GetDbContext();
             var service = new PostService(context);
 
             var post = new Models.Post { Title = "Old", Content = "old text" };
@@ -120,7 +120,7 @@ namespace BlogApi.Tests
         [Fact]
         public async Task DeletePost_RemovesPost()
         {
-            var context = await GetDbContext();
+            await using var context = await GetDbContext();
             var service = new PostService(context);
 
             var post = new Models.Post { Title = "Accidental Post", Content = "Didn't mean to post this!" };

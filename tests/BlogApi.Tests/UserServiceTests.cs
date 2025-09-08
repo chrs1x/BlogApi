@@ -24,7 +24,7 @@ namespace BlogApi.Tests
         [Fact]
         public async Task GetAllUsers_ReturnsAllUsers()
         {
-            var context = await GetDbContext();
+            await using var context = await GetDbContext();
             var service = new UserService(context);
 
             context.Users.Add(new Models.User { Name = "Josh", Email = "jrudge@gmail.com" });
@@ -39,7 +39,7 @@ namespace BlogApi.Tests
         [Fact]
         public async Task GetUserById_ReturnsUser()
         {
-            var context = await GetDbContext();
+            await using var context = await GetDbContext();
             var service = new UserService(context);
 
             var user = new Models.User { Name = "Chris", Email = "conditi@gmail.com" };
@@ -55,7 +55,7 @@ namespace BlogApi.Tests
         [Fact]
         public async Task CreateUser_SavesUser()
         {
-            var context = await GetDbContext();
+            await using var context = await GetDbContext();
             var service = new UserService(context);
 
             var user = await service.CreateUser(new Models.CreateUserDto
@@ -72,7 +72,7 @@ namespace BlogApi.Tests
         [Fact]
         public async Task UpdateUser_ModifiesExistingUser()
         {
-            var context = await GetDbContext();
+            await using var context = await GetDbContext();
             var service = new UserService(context);
 
             var user = new Models.User { Name = "John", Email = "jevans@gmail.com" };
@@ -92,7 +92,7 @@ namespace BlogApi.Tests
         [Fact]
         public async Task DeleteUser_RemovesUser()
         {
-            var context = await GetDbContext();
+            await using var context = await GetDbContext();
             var service = new UserService(context);
 
             var user = new Models.User { Name = "Raph", Email = "rcoppins@gmail.com" };
