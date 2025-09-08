@@ -90,7 +90,7 @@ namespace BlogApi.Tests
         }
 
         [Fact]
-        public async Task DeleteUser()
+        public async Task DeleteUser_RemovesUser()
         {
             var context = await GetDbContext();
             var service = new UserService(context);
